@@ -95,6 +95,10 @@
     <Content Include="Content\js\cropper.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Global.asax" />
+    <Content Include="Upload\picture0.jpg" />
+    <Content Include="Upload\picture1.jpg" />
+    <Content Include="Upload\picture2.jpg" />
+    <Content Include="Upload\picture3.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
