@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpiaGed.Recognition", "HarpiaGed.Recognition.csproj", "{7885E70C-8DA7-4F22-93B9-446265217B63}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Domain", "01 - Domain", "{1ECF2874-F2FE-4FA0-BAF5-07ED04555D3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Presentation", "02 - Presentation", "{974450AA-422B-4125-AF95-5177736D7813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpiaGed.Recognition.WebUI", "..\HarpiaGed.Recognition.WebUI\HarpiaGed.Recognition.WebUI.csproj", "{6AA57B65-9983-4220-8323-B29C9344697E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +21,16 @@ Global
 		{7885E70C-8DA7-4F22-93B9-446265217B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7885E70C-8DA7-4F22-93B9-446265217B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7885E70C-8DA7-4F22-93B9-446265217B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA57B65-9983-4220-8323-B29C9344697E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA57B65-9983-4220-8323-B29C9344697E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA57B65-9983-4220-8323-B29C9344697E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA57B65-9983-4220-8323-B29C9344697E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7885E70C-8DA7-4F22-93B9-446265217B63} = {1ECF2874-F2FE-4FA0-BAF5-07ED04555D3E}
+		{6AA57B65-9983-4220-8323-B29C9344697E} = {974450AA-422B-4125-AF95-5177736D7813}
 	EndGlobalSection
 EndGlobal
