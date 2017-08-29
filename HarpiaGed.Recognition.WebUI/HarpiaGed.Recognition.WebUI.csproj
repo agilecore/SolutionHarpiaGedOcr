@@ -112,7 +112,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Editor.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -142,7 +142,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50079</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49656/</IISUrl>
+          <IISUrl>http://localhost:44444/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

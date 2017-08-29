@@ -111,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="ImageAnnotation.cs" />
+    <Compile Include="InfoImage.cs" />
+    <Compile Include="NumericExtender.cs" />
     <Compile Include="Structure\Page.cs" />
     <Compile Include="OcrTesseract.cs" />
     <Compile Include="OcrGoogle.cs" />
