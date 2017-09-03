@@ -81,6 +81,20 @@ namespace HarpiaGed.Recognition
                 return (null);
             }            
         }
+        public List<FaceAnnotation> DetectFaces(string fileToRecognize)
+        {
+            try
+            {
+                var client = ImageAnnotatorClient.Create();
+                var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
+                var response = client.DetectFaces(image).ToList();
+                return response;
+            }
+            catch
+            {
+                return (null);
+            }
+        }
     }
 
 

@@ -53,7 +53,6 @@ namespace HarpiaGed.Recognition
         /// </summary>
         public String ImageFormat { get; set; }
 
-
         /// <summary>
         /// Dimensao física da imagem
         /// </summary>
@@ -119,6 +118,9 @@ namespace HarpiaGed.Recognition
         /// </summary>
         public string Interpolacao { get; set; }
 
+        /// <summary>
+        /// Qualidade da image.
+        /// </summary>
         public string Megapixel { get; set; }
 
         /// <summary>

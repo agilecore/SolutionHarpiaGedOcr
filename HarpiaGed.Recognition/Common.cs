@@ -22,6 +22,13 @@ namespace HarpiaGed.Recognition
             return (image);
         }
 
+        //public static string CalcPPIFromImage()
+        //{
+        //    Screen myScreen = Screen.FromControl(this);
+        //    int y = myScreen.WorkingArea.Height;
+        //    int x = myScreen.WorkingArea.Width;
+        //}
+
         public static Bitmap GetBitmap(string file)
         {
             var image = Image.FromFile(file);
@@ -67,11 +74,11 @@ namespace HarpiaGed.Recognition
         public static string GetFileSize(string file)
         {
             FileInfo fileInfo = new FileInfo(file);
-            var result = GetFileSize(fileInfo.Length);            
+            var result = GetSizeFromFile(fileInfo.Length);            
             return (result);
         }
 
-        internal static string GetFileSize(long bytes)
+        internal static string GetSizeFromFile(long bytes)
         {
             if (bytes < 0) throw new ArgumentException("bytes");
 
@@ -111,7 +118,7 @@ namespace HarpiaGed.Recognition
             else return bytes.ToString("0 B"); // Byte
 
             humano /= 1024;
-            return humano.ToString("0.## ") + sufixo;
+            return humano.ToString("0.##") + sufixo;
         } 
 
         public static System.Drawing.Imaging.ImageFormat GetImageFormat(System.Drawing.Image image)
@@ -158,6 +165,12 @@ namespace HarpiaGed.Recognition
             if (image.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Tiff))
                 return System.Drawing.Imaging.ImageFormat.Tiff.ToString();
             else { return System.Drawing.Imaging.ImageFormat.Wmf.ToString(); }
+        }
+
+        public static string GetSizeInMegapixel(System.Drawing.Image image)
+        {
+            var sizeMegapixel = (image.Width * image.Height);
+            return (sizeMegapixel.ToString());
         }
 
         public static void CreateXml(string directory, string fileName, InfoImage infoImage)

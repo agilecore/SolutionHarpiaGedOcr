@@ -20,288 +20,55 @@ namespace HarpiaGed.Recognition.UnitTest
 
         static void Inicialize()
         {
-            //CarregaImage01();
-            //CarregaImage02();
-            //CarregaImage03();
-            //CarregaImage04();
-            //CarregaImage05();
-            //CarregaImage06();
-            //CarregaImage07();
-            //CarregaImage08();
-            //CarregaImage09();
-            //CarregaImage10();
-            ChamaServico();
+            buildInformation();
+            //ChamaServico();
         }
 
-        static void CarregaImage01()
+        internal static void buildInformation()
         {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 1 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-            
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\1.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
+            var collectionFiles = new List<String>();
 
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\1.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\2.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\3.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\4.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\5.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\6.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\7.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\8.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\9.jpg" );
+            collectionFiles.Add(@"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\10.jpg");
+
+            var count = 1;
+
+            foreach (string item in collectionFiles)
+            {
+                WriteToConsole("-----------------------------------------------------------------------------");
+                WriteToConsole("-- Image " + count);
+                WriteToConsole("-----------------------------------------------------------------------------");
+
+                WriteInScreen(item);
+
+                count += 1;
+            }
 
         }
 
-        static void CarregaImage02()
+        static void WriteInScreen(string diretoryImage)
         {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 2 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\2.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
+            var imageDto = new InfoImage(diretoryImage)._imageAnnotation;
+            WriteToConsole("Largura......................................" + imageDto.Width);
+            WriteToConsole("Altura......................................." + imageDto.Height);
+            WriteToConsole("DpiX(Dots per InchsX)........................" + imageDto.HorizontalResolutionDpiX);
+            WriteToConsole("DpiY(Dots per InchsY)........................" + imageDto.VerticalResolutionDpiY);
+            WriteToConsole("PpiX(Pixel per InchsX)......................." + imageDto.HorizontalResolutionPpiX);
+            WriteToConsole("PpiY(Pixel per InchsY)......................." + imageDto.VerticalResolutionPpiY);
+            WriteToConsole("PixelFormat.................................." + imageDto.PixelFormat);
+            WriteToConsole("Extension...................................." + imageDto.Extension);
+            WriteToConsole("Megapixel...................................." + imageDto.Megapixel);
+            WriteToConsole("FileSize....................................." + imageDto.FileSize);
+            WriteToConsole("Interpolacao................................." + imageDto.Interpolacao);
         }
-
-        static void CarregaImage03()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 3 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-            
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\3.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
-        }
-
-        static void CarregaImage04()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 4 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\4.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
-        }
-
-        static void CarregaImage05()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 5 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\5.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-        }
-
-        static void CarregaImage06()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 6 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\6.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
-        }
-
-        static void CarregaImage07()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 7 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\7.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
-        }
-        
-        static void CarregaImage08()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 8 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\8.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
-        }
-
-        static void CarregaImage09()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 9 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\9.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
-        }
-
-        static void CarregaImage10()
-        {
-            WriteToConsole(String.Empty);
-            WriteToConsole("-----------------------------------------------------------------------------");
-            WriteToConsole("Image 10 ");
-            WriteToConsole("-----------------------------------------------------------------------------");
-
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\10.jpg";
-            var infoImage = new InfoImage(diretoryImage)._imageAnnotation;
-
-            WriteToConsole("Aspect Rate:..................... " + infoImage.AspectRadio.ToString());
-            WriteToConsole("Ponto por Polegada (DpiX):....... " + infoImage.DpiX.ToString());
-            WriteToConsole("Ponto por Polegada (DpiY):....... " + infoImage.DpiY.ToString());
-            WriteToConsole("Largura:......................... " + infoImage.Width + "px");
-            WriteToConsole("Altura:.......................... " + infoImage.Height + "px");
-            WriteToConsole("Formato de Pixel:................ " + infoImage.PixelFormatType);
-            WriteToConsole("Formato de Image:................ " + infoImage.ImageFormat);
-            WriteToConsole("Tamanho:......................... " + infoImage.Size);
-            WriteToConsole("Largura Física:.................. " + infoImage.PhisicalDimensionWidth);
-            WriteToConsole("Altura Física:................... " + infoImage.PhisicalDimensionHeight);
-            WriteToConsole("Horizondal Resolution:........... " + infoImage.HorizondalResolution);
-            WriteToConsole("Vertical Resolution:............. " + infoImage.VeritcalResolution);
-            WriteToConsole("Modo Interpolacao:............... " + infoImage.Interpolacao);
-            WriteToConsole("Megapixel:....................... " + infoImage.Megapixel);
-
-        }
-
 
         /// <summary>
         /// Chamada do Google
