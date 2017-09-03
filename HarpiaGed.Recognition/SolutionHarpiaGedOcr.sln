@@ -13,7 +13,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpiaGed.Recognition.WebUI
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - UnitTest", "04 - UnitTest", "{2CBDA264-85AD-4678-A6E2-89069A70AF2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpiaGed.Recognition.UnitText", "..\HarpiaGed.Recognition.UnitText\HarpiaGed.Recognition.UnitText.csproj", "{911C53B3-065C-45C7-AD6F-1F11D2EBCB4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpiaGed.Recognition.UnitTest", "..\HarpiaGed.Recognition.UnitTest\HarpiaGed.Recognition.UnitTest.csproj", "{911C53B3-065C-45C7-AD6F-1F11D2EBCB4B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8179F8D7-78BD-4590-82FB-6F1E3453AC71} = {8179F8D7-78BD-4590-82FB-6F1E3453AC71}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Services", "03 - Services", "{5BB8FF1C-4766-46AA-812C-971224983905}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarpiaGed.Recognition.WCF", "..\HarpiaGed.Recognition.WCF\HarpiaGed.Recognition.WCF.csproj", "{8179F8D7-78BD-4590-82FB-6F1E3453AC71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Data", "00 - Data", "{5D7F7706-0722-4B0B-9E6F-F0D15A80558A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harpia.Generator", "..\HarpiaGed.Generator\Harpia.Generator.csproj", "{646CEE3E-30D7-4F65-A78F-73AC82E89805}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +44,14 @@ Global
 		{911C53B3-065C-45C7-AD6F-1F11D2EBCB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{911C53B3-065C-45C7-AD6F-1F11D2EBCB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{911C53B3-065C-45C7-AD6F-1F11D2EBCB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8179F8D7-78BD-4590-82FB-6F1E3453AC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8179F8D7-78BD-4590-82FB-6F1E3453AC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8179F8D7-78BD-4590-82FB-6F1E3453AC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8179F8D7-78BD-4590-82FB-6F1E3453AC71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646CEE3E-30D7-4F65-A78F-73AC82E89805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646CEE3E-30D7-4F65-A78F-73AC82E89805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646CEE3E-30D7-4F65-A78F-73AC82E89805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646CEE3E-30D7-4F65-A78F-73AC82E89805}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +60,7 @@ Global
 		{7885E70C-8DA7-4F22-93B9-446265217B63} = {1ECF2874-F2FE-4FA0-BAF5-07ED04555D3E}
 		{6AA57B65-9983-4220-8323-B29C9344697E} = {974450AA-422B-4125-AF95-5177736D7813}
 		{911C53B3-065C-45C7-AD6F-1F11D2EBCB4B} = {2CBDA264-85AD-4678-A6E2-89069A70AF2E}
+		{8179F8D7-78BD-4590-82FB-6F1E3453AC71} = {5BB8FF1C-4766-46AA-812C-971224983905}
+		{646CEE3E-30D7-4F65-A78F-73AC82E89805} = {5D7F7706-0722-4B0B-9E6F-F0D15A80558A}
 	EndGlobalSection
 EndGlobal

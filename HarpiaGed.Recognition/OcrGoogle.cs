@@ -12,8 +12,7 @@ using Google.Apis.Json;
 
 namespace HarpiaGed.Recognition
 {
-    public class OcrGoogle
-    {
+    public class OcrGoogle {
         internal string output { get; set; }
         internal string googleCredential { get; set; }
         internal void Initializer()
@@ -26,44 +25,62 @@ namespace HarpiaGed.Recognition
         {
             Initializer();
         }
-
-        internal TextAnnotation DetectDocumentText(string fileToRecognize)
+        public TextAnnotation DetectDocumentText(string fileToRecognize)
         {
-            var client   = ImageAnnotatorClient.Create();
-            var image    = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
-            var response = client.DetectDocumentText(image);
-
-            return (response);
+            try
+            {
+                var client = ImageAnnotatorClient.Create();
+                var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
+                var response = client.DetectDocumentText(image);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return (null);
+            }
         }
-
-        internal ImageProperties DetectImageProperties(string fileToRecognize)
+        public ImageProperties DetectImageProperties(string fileToRecognize)
         {
-            var client = ImageAnnotatorClient.Create();
-            var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
-            var response = client.DetectImageProperties(image);
-
-            return (response);
+            try
+            {
+                var client = ImageAnnotatorClient.Create();
+                var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
+                var response = client.DetectImageProperties(image);
+                return response;
+            }
+            catch
+            {
+                return (null);
+            }
         }
-
-        internal List<EntityAnnotation> DetectText(string fileToRecognize)
+        public List<EntityAnnotation> DetectText(string fileToRecognize)
         {
-            var client = ImageAnnotatorClient.Create();
-            var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
-            var response = client.DetectText(image).ToList();
-
-            return (response);
+            try
+            {
+                var client = ImageAnnotatorClient.Create();
+                var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
+                var response = client.DetectText(image).ToList();
+                return response;
+            }
+            catch
+            {
+                return (null);
+            }
         }
-
-        internal WebDetection WebDetectionSingleImage(string fileToRecognize)
+        public WebDetection WebDetectionSingleImage(string fileToRecognize)
         {
-            var client = ImageAnnotatorClient.Create();
-            var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
-            var response = client.DetectWebInformation(image);
-
-            return (response);
+            try
+            {
+                var client = ImageAnnotatorClient.Create();
+                var image = Google.Cloud.Vision.V1.Image.FromFile(fileToRecognize);
+                var response = client.DetectWebInformation(image);
+                return response;
+            }
+            catch
+            {
+                return (null);
+            }            
         }
-
-
     }
 
 

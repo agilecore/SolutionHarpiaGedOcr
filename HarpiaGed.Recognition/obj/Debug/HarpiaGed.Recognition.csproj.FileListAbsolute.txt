@@ -80,13 +80,11 @@ C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recog
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Api.CommonProtos.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Api.Gax.pdb
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Api.Gax.xml
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Api.Gax.Grpc.pdb
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Api.Gax.Grpc.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Apis.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Apis.Auth.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Apis.Core.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Apis.Vision.v1.xml
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Cloud.Vision.V1.pdb
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Cloud.Vision.V1.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Google.Protobuf.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Grpc.Auth.xml
@@ -94,6 +92,6 @@ C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recog
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Newtonsoft.Json.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\System.Interactive.Async.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\bin\Debug\Tesseract.xml
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\obj\Debug\HarpiaGed.Recognition.csprojResolveAssemblyReference.cache
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\obj\Debug\HarpiaGed.Recognition.dll
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\obj\Debug\HarpiaGed.Recognition.pdb
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition\obj\Debug\HarpiaGed.Recognition.csprojResolveAssemblyReference.cache

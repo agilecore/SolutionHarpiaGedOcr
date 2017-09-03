@@ -26,6 +26,7 @@ namespace HarpiaGed.Recognition
         {
             var image = Image.FromFile(file);
             var bitmap = new Bitmap(image);
+            image.Dispose();
             return (bitmap);
         }
 
@@ -34,6 +35,7 @@ namespace HarpiaGed.Recognition
             var image = Image.FromFile(file);
             var imageConverter = new ImageConverter();
             var byteFromImage  = (byte[])imageConverter.ConvertTo(image, typeof(byte[]));
+            image.Dispose();
             return (byteFromImage);
         }
 
@@ -48,6 +50,7 @@ namespace HarpiaGed.Recognition
         {
             var image  = Image.FromFile(file);
             var bitmap = new Bitmap(image);
+            image.Dispose();
             return (bitmap.Width > bitmap.Height) ? decimal.Divide(Convert.ToDecimal(bitmap.Width), Convert.ToDecimal(bitmap.Height)) : decimal.Divide(Convert.ToDecimal(bitmap.Height), Convert.ToDecimal(bitmap.Width));
         }
 
@@ -56,13 +59,15 @@ namespace HarpiaGed.Recognition
             var image = Image.FromFile(file);
             var graphics = Graphics.FromImage(image);
             var metafile = new Metafile(file, graphics.GetHdc(), new Rectangle(0, 0, 101, 101), MetafileFrameUnit.Pixel);
+            image.Dispose();
+            graphics.Dispose();
             return (metafile);
         }
 
         public static string GetFileSize(string file)
         {
             FileInfo fileInfo = new FileInfo(file);
-            var result = GetFileSize(fileInfo.Length);
+            var result = GetFileSize(fileInfo.Length);            
             return (result);
         }
 
@@ -155,33 +160,28 @@ namespace HarpiaGed.Recognition
             else { return System.Drawing.Imaging.ImageFormat.Wmf.ToString(); }
         }
 
-        ///// <summary>
-        ///// Cria xml com as informacoes processadas do arquivo de imagem.
-        ///// </summary>
-        ///// <param name="directory">Ex: c:\folder</param>
-        ///// <param name="fileName">Ex: output.xml</param>
-        //public static void CreateXml(string directory, string fileName, )
-        //{
-        //    using (XmlWriter writer = XmlWriter.Create(String.Concat(directory, @"\" + fileName)))
-        //    {
-        //        writer.WriteStartDocument();
-        //        writer.WriteStartElement("Employees");
+        public static void CreateXml(string directory, string fileName, InfoImage infoImage)
+        {
+            using (XmlWriter writer = XmlWriter.Create(String.Concat(directory, @"\" + fileName)))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("image");
+                
+                //foreach (Employee employee in employees)
+                //{
+                //    writer.WriteStartElement("Employee");
 
-        //        foreach (Employee employee in employees)
-        //        {
-        //            writer.WriteStartElement("Employee");
+                //    writer.WriteElementString("ID", employee.Id.ToString());
+                //    writer.WriteElementString("FirstName", employee.FirstName);
+                //    writer.WriteElementString("LastName", employee.LastName);
+                //    writer.WriteElementString("Salary", employee.Salary.ToString());
 
-        //            writer.WriteElementString("ID", employee.Id.ToString());
-        //            writer.WriteElementString("FirstName", employee.FirstName);
-        //            writer.WriteElementString("LastName", employee.LastName);
-        //            writer.WriteElementString("Salary", employee.Salary.ToString());
+                //    writer.WriteEndElement();
+                //}
 
-        //            writer.WriteEndElement();
-        //        }
-
-        //        writer.WriteEndElement();
-        //        writer.WriteEndDocument();
-        //    }
-        //}
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
+        }
     }
 }

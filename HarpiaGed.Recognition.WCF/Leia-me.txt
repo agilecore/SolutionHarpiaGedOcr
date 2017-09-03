@@ -1,0 +1,7 @@
+﻿#----------------------------------------------------------
+# Google Vision v1
+#----------------------------------------------------------
+
+Documentacao
+https://developers.google.com/resources/api-libraries/documentation/vision/v1/csharp/latest/namespaceGoogle_1_1Apis_1_1Vision_1_1v1_1_1Data.html
+

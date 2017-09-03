@@ -434,18 +434,6 @@
             <param name="value">The value of the header to add. Must not be null.</param>
             <returns>A new instance.</returns>
         </member>
-        <member name="M:Google.Api.Gax.Grpc.CallSettings.FromFieldMask(System.String)">
-            <summary>
-            Creates a <see cref="T:Google.Api.Gax.Grpc.CallSettings"/> that will include a field mask in the request, to
-            limit which fields are returned in the response.
-            </summary>
-            <remarks>
-            The precise effect on the request is not guaranteed: it may be through a header or a side-channel,
-            for example. Likewise the effect of combining multiple settings containing field masks is not specified.
-            </remarks>
-            <param name="fieldMask">The field mask for the request. Must not be null.</param>
-            <returns>A new instance.</returns>
-        </member>
         <member name="T:Google.Api.Gax.Grpc.CallSettingsExtensions">
             <summary>
             Extension methods for <see cref="T:Google.Api.Gax.Grpc.CallSettings"/>.
@@ -523,18 +511,6 @@
             <param name="deadline">Deadline to enforce. May be null, meaning there is no deadline to enforce.</param>
             <param name="clock">The clock to use when computing deadlines. Must not be null.</param>
             <returns>The call settings to use to observe the given deadline.</returns>
-        </member>
-        <member name="M:Google.Api.Gax.Grpc.CallSettingsExtensions.WithExpiration(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Expiration)">
-            <summary>
-            Returns a new <see cref="T:Google.Api.Gax.Grpc.CallSettings"/> with the given the expiration, merged with the (optional) original settings specified by <paramref name="settings"/>.
-            </summary>
-            <remarks>
-            If <paramref name="settings"/> is non-null and has retry-based timing, the returned settings will have the same timing, but with the specified
-            expiration. Otherwise, the returned settings will have a simple expiration.
-            </remarks>
-            <param name="settings">Existing settings. May be null, meaning there are currently no settings.</param>
-            <param name="expiration">Expiration to use in the returned settings, possibly as part of a retry. Must not be null.</param>
-            <returns></returns>
         </member>
         <member name="M:Google.Api.Gax.Grpc.CallSettingsExtensions.ToCallOptions(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.IClock)">
             <summary>

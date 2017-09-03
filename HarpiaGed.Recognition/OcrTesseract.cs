@@ -30,7 +30,7 @@ namespace HarpiaGed.Recognition
             DetectText(fileToRecognize);
         }
 
-        internal void DetectText(string fileToRecognize)
+        public void DetectText(string fileToRecognize)
         {
             var findText = string.Empty;
 
@@ -57,7 +57,9 @@ namespace HarpiaGed.Recognition
             }
 
             this.annotation = findText;
-        }
+        }      
+
+
 
         //internal void DetectTextInterator(string fileToRecognize)
         //{

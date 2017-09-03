@@ -15,7 +15,6 @@ namespace HarpiaGed.Recognition
         internal Image _image { get; set; }
         public ImageAnnotation _imageAnnotation { get; set; }
         internal Graphics _graphics { get; set; }
-
         public InfoImage(string diretoryImge)
         {
             Initialize(diretoryImge);

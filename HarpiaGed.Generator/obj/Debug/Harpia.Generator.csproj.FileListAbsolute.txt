@@ -1,0 +1,16 @@
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\bin\Debug\Gerador.v1.exe.config
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\bin\Debug\Gerador.v1.exe
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\bin\Debug\Gerador.v1.pdb
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\bin\Debug\MySql.Data.dll
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\bin\Debug\MySql.Data.xml
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\obj\Debug\Harpia.Generator.csprojResolveAssemblyReference.cache
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\obj\Debug\Gerador.v1.exe
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpia\Solution HarpiaGed\HarpiaGed.Generator\obj\Debug\Gerador.v1.pdb
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\bin\Debug\Gerador.v1.exe.config
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\bin\Debug\Gerador.v1.exe
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\bin\Debug\Gerador.v1.pdb
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\bin\Debug\MySql.Data.dll
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\bin\Debug\MySql.Data.xml
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\obj\Debug\Harpia.Generator.csprojResolveAssemblyReference.cache
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\obj\Debug\Gerador.v1.exe
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGed\HarpiaGed.Generator\obj\Debug\Gerador.v1.pdb
