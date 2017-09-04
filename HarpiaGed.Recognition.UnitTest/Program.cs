@@ -20,8 +20,8 @@ namespace HarpiaGed.Recognition.UnitTest
 
         static void Inicialize()
         {
-            buildInformation();
-            //ChamaServico();
+            //buildInformation();
+            ChamaServico();
         }
 
         internal static void buildInformation()
