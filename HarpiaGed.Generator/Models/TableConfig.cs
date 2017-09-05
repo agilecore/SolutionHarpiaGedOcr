@@ -20,9 +20,9 @@ namespace Gerador.Models
         {
             var Storage = new Dictionary<String, ModelConfig>();
 
-            /// tabelas do banco 
-            Storage.Add("USUARIO", new ModelConfig() { ClassName = "Usuario", NameSpaceDto = "HarpiaGed.Data", NameSpaceMapper = "HarpiaGed.Data", NameSpaceDomain = "HarpiaGed.Domain", NameSpaceService = "HarpiaGed.Service", CreateController = false });
-      
+            Storage.Add("IMAGEM",     new ModelConfig() { ClassName = "Image", NameSpaceDto = "HarpiaGed.Recognition.Data", NameSpaceMapper = "HarpiaGed.Recognition.Data", NameSpaceDomain = "HarpiaGed.Recognition.Domain", NameSpaceService = "HarpiaGed.Recognition.Service", CreateController = false });
+            Storage.Add("IMAGEM_OCR", new ModelConfig()  { ClassName = "ImageOcr", NameSpaceDto = "HarpiaGed.Recognition.Data", NameSpaceMapper = "HarpiaGed.Recognition.Data", NameSpaceDomain = "HarpiaGed.Recognition.Domain", NameSpaceService = "HarpiaGed.Recognition.Service", CreateController = false });
+            
             return (Storage);
         }
     }

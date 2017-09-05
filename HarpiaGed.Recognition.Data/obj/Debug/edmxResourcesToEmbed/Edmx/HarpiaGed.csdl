@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HarpiaGed.Recognition.Data.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="imagem">
+    <Key>
+      <PropertyRef Name="id_imagem" />
+    </Key>
+    <Property Name="id_imagem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dpix" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dpiy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ppix" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ppiy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="width" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="height" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pixel_format" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="extension" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="megapixel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="file_size" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="interpolacao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dt_entrada" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="qualidade" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="documento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="imagem_ocr" Relationship="Self.FK__imagem_oc__id_im__30F848ED" FromRole="imagem" ToRole="imagem_ocr" />
+  </EntityType>
+  <EntityType Name="imagem_ocr">
+    <Key>
+      <PropertyRef Name="id_imagem_ocr" />
+    </Key>
+    <Property Name="id_imagem_ocr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_imagem" Type="Int32" Nullable="false" />
+    <Property Name="descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vertice_top" Type="Int32" Nullable="false" />
+    <Property Name="vertice_left" Type="Int32" Nullable="false" />
+    <Property Name="vertice_right" Type="Int32" Nullable="false" />
+    <Property Name="vertice_bottom" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="imagem" Relationship="Self.FK__imagem_oc__id_im__30F848ED" FromRole="imagem_ocr" ToRole="imagem" />
+  </EntityType>
+  <Association Name="FK__imagem_oc__id_im__30F848ED">
+    <End Role="imagem" Type="Self.imagem" Multiplicity="1" />
+    <End Role="imagem_ocr" Type="Self.imagem_ocr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="imagem">
+        <PropertyRef Name="id_imagem" />
+      </Principal>
+      <Dependent Role="imagem_ocr">
+        <PropertyRef Name="id_imagem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HarpiaGedOcrEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="imagem" EntityType="Self.imagem" />
+    <EntitySet Name="imagem_ocr" EntityType="Self.imagem_ocr" />
+    <AssociationSet Name="FK__imagem_oc__id_im__30F848ED" Association="Self.FK__imagem_oc__id_im__30F848ED">
+      <End Role="imagem" EntitySet="imagem" />
+      <End Role="imagem_ocr" EntitySet="imagem_ocr" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

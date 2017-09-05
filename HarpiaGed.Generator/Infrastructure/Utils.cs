@@ -140,9 +140,9 @@ namespace Gerador.Infrastructure
 
 						Column.ColumnName = Conexao.Ler("COLUMN_NAME").ToString();
 						Column.IsNullable = Conexao.Ler("IS_NULLABLE").ToString();
-						Column.DataType = Conexao.Ler("DATA_TYPE").ToString();
-						Column.MaxLenght = Conexao.Ler("MAXIMUM_LENGTH").ToString();
-						Column.ColumnKey = Conexao.Ler("COLUMN_KEY").ToString();
+						Column.DataType   = Conexao.Ler("DATA_TYPE").ToString();
+						Column.MaxLenght  = Conexao.Ler("MAXIMUM_LENGTH").ToString();
+						Column.ColumnKey  = Conexao.Ler("COLUMN_KEY").ToString();
 
 						CollectionColumnMapper.Add(Column);
 					}

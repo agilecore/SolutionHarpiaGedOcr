@@ -61,6 +61,7 @@ namespace Gerador.Infrastructure
             TextClass.AppendLine("        public virtual void Save(" + String.Concat(DataModel.ClassName, Sufixo) + " model)");
             TextClass.AppendLine("        {");
             TextClass.AppendLine("            _unitOfWork.GetRepository<" + String.Concat(DataModel.ClassName, Sufixo) + ">().Add(model);");
+            TextClass.AppendLine("            _unitOfWork.SaveChage();");
             TextClass.AppendLine("        }");
             TextClass.AppendLine("");
             TextClass.AppendLine("        /// <summary>");
@@ -69,6 +70,7 @@ namespace Gerador.Infrastructure
             TextClass.AppendLine("        public virtual " + String.Concat(DataModel.ClassName, Sufixo) + " SaveGetItem(" + String.Concat(DataModel.ClassName, Sufixo) + " model)");
             TextClass.AppendLine("        {");
             TextClass.AppendLine("           _unitOfWork.GetRepository<" + String.Concat(DataModel.ClassName, Sufixo) + ">().Add(model);");
+            TextClass.AppendLine("           _unitOfWork.SaveChage();");
             TextClass.AppendLine("           return (model);");
             TextClass.AppendLine("        }");
             TextClass.AppendLine("");
@@ -78,6 +80,7 @@ namespace Gerador.Infrastructure
             TextClass.AppendLine("        public virtual void SaveAll(List<" + String.Concat(DataModel.ClassName, Sufixo) + "> model)");
             TextClass.AppendLine("        {");
             TextClass.AppendLine("            _unitOfWork.GetRepository<" + String.Concat(DataModel.ClassName, Sufixo) + ">().AddAll(model);");
+            TextClass.AppendLine("            _unitOfWork.SaveChage();");
             TextClass.AppendLine("        }");
             TextClass.AppendLine("");
             TextClass.AppendLine("        /// <summary>");
@@ -86,6 +89,7 @@ namespace Gerador.Infrastructure
             TextClass.AppendLine("        public virtual void Update(" + String.Concat(DataModel.ClassName, Sufixo) + " model)");
             TextClass.AppendLine("        {");
             TextClass.AppendLine("            _unitOfWork.GetRepository<" + String.Concat(DataModel.ClassName, Sufixo) + ">().Update(model);");
+            TextClass.AppendLine("            _unitOfWork.SaveChage();");
             TextClass.AppendLine("        }");
             TextClass.AppendLine("");
             TextClass.AppendLine("        /// <summary>");
@@ -104,6 +108,7 @@ namespace Gerador.Infrastructure
             TextClass.AppendLine("        public virtual void Delete(Expression<Func<" + String.Concat(DataModel.ClassName, Sufixo) + ", bool>> filter)");
             TextClass.AppendLine("        {");
             TextClass.AppendLine("             _unitOfWork.GetRepository<" + String.Concat(DataModel.ClassName, Sufixo) + ">().Delete(filter);");
+            TextClass.AppendLine("             _unitOfWork.SaveChage();");
             TextClass.AppendLine("        }");
             TextClass.AppendLine("");
             TextClass.AppendLine("        /// <summary>");

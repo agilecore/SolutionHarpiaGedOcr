@@ -129,14 +129,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common.cs" />
     <Compile Include="Interface\IGoogleService.cs" />
     <Compile Include="GoogleService.svc.cs">
       <DependentUpon>GoogleService.svc</DependentUpon>
     </Compile>
-    <Compile Include="Model\ImageData.cs" />
+    <Compile Include="Models\ImageDto.cs" />
+    <Compile Include="InfoImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HarpiaGed.Recognition.Data\HarpiaGed.Recognition.Data.csproj">
+      <Project>{aca17272-0229-466c-8e19-de7d75c1a860}</Project>
+      <Name>HarpiaGed.Recognition.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="json\HarpiaGedRecognition-eb7d69342776.json" />

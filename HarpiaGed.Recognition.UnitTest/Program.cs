@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HarpiaGed.Recognition.Estructure;
 using System.Threading;
 using System.Diagnostics;
+using HarpiaGed.Recognition.WCF;
 
 namespace HarpiaGed.Recognition.UnitTest
 {
@@ -20,8 +20,8 @@ namespace HarpiaGed.Recognition.UnitTest
 
         static void Inicialize()
         {
-            //buildInformation();
-            ChamaServico();
+            buildInformation();
+            //ChamaServico();
         }
 
         internal static void buildInformation()
@@ -107,7 +107,6 @@ namespace HarpiaGed.Recognition.UnitTest
             {
                 WriteToConsole(item.ToString());
             }
-
             stopwatch.Stop();
 
             Console.ForegroundColor = ConsoleColor.Yellow;

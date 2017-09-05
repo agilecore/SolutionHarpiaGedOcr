@@ -116,13 +116,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HarpiaGed.Recognition.Data\HarpiaGed.Recognition.Data.csproj">
+      <Project>{ACA17272-0229-466C-8E19-DE7D75C1A860}</Project>
+      <Name>HarpiaGed.Recognition.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HarpiaGed.Recognition.WCF\HarpiaGed.Recognition.WCF.csproj">
       <Project>{8179f8d7-78bd-4590-82fb-6f1e3453ac71}</Project>
       <Name>HarpiaGed.Recognition.WCF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HarpiaGed.Recognition\HarpiaGed.Recognition.csproj">
-      <Project>{7885e70c-8da7-4f22-93b9-446265217b63}</Project>
-      <Name>HarpiaGed.Recognition</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HarpiaGedRecognitionDataModelStoreContainer" CdmEntityContainer="HarpiaGedOcrEntities">
+    <EntitySetMapping Name="imagem">
+      <EntityTypeMapping TypeName="HarpiaGed.Recognition.Data.Model.imagem">
+        <MappingFragment StoreEntitySet="imagem">
+          <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+          <ScalarProperty Name="dpix" ColumnName="dpix" />
+          <ScalarProperty Name="dpiy" ColumnName="dpiy" />
+          <ScalarProperty Name="ppix" ColumnName="ppix" />
+          <ScalarProperty Name="ppiy" ColumnName="ppiy" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="pixel_format" ColumnName="pixel_format" />
+          <ScalarProperty Name="extension" ColumnName="extension" />
+          <ScalarProperty Name="megapixel" ColumnName="megapixel" />
+          <ScalarProperty Name="file_size" ColumnName="file_size" />
+          <ScalarProperty Name="interpolacao" ColumnName="interpolacao" />
+          <ScalarProperty Name="dt_entrada" ColumnName="dt_entrada" />
+          <ScalarProperty Name="qualidade" ColumnName="qualidade" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="imagem_ocr">
+      <EntityTypeMapping TypeName="HarpiaGed.Recognition.Data.Model.imagem_ocr">
+        <MappingFragment StoreEntitySet="imagem_ocr">
+          <ScalarProperty Name="id_imagem_ocr" ColumnName="id_imagem_ocr" />
+          <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="vertice_top" ColumnName="vertice_top" />
+          <ScalarProperty Name="vertice_left" ColumnName="vertice_left" />
+          <ScalarProperty Name="vertice_right" ColumnName="vertice_right" />
+          <ScalarProperty Name="vertice_bottom" ColumnName="vertice_bottom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

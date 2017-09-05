@@ -60,13 +60,16 @@ namespace Gerador.Infrastructure
             TextClass.AppendLine("using System.Text;");
             TextClass.AppendLine("using System.Collections.Generic;");
             TextClass.AppendLine("using System.Threading.Tasks;");
+            TextClass.AppendLine("using System.ComponentModel.DataAnnotations.Schema;");
+            TextClass.AppendLine("using System.ComponentModel.DataAnnotations;");
             TextClass.AppendLine("");
             TextClass.AppendLine("namespace " + ProjectName + ".Common");
             TextClass.AppendLine("{");
             TextClass.AppendLine("    /// <summary>");
             TextClass.AppendLine("    /// Nao alterar essa classe pois ela é o objeto identico a tabela do banco de dados.");
             TextClass.AppendLine("    /// </summary>");
-            TextClass.AppendLine("    public class " + String.Concat(DataModel.ClassName, SufixoModels) + " : Base");
+            TextClass.AppendLine("    [Table(\"" + TableName.ToLower() + "\")]");
+            TextClass.AppendLine("    public class " + String.Concat(DataModel.ClassName, SufixoModels));
             TextClass.AppendLine("    {");
 
             foreach (var ColumnMapper in TableSchema.CollectionColumn)
@@ -143,6 +146,12 @@ namespace Gerador.Infrastructure
                         ColumnDataType = Utils.GetColumnType(ColumnMapper.DataType);
                         TextClass.AppendLine("        public " + ColumnDataType + " " + ColumnMapper.ColumnName + " { get; set; }");
                     }
+                }
+                else
+                {
+                    ColumnDataType = Utils.GetColumnType(ColumnMapper.DataType);
+                    TextClass.AppendLine("        [Key]");
+                    TextClass.AppendLine("        public " + ColumnDataType + " " + ColumnMapper.ColumnName + " { get; set; }");
                 }
             }
 
@@ -337,6 +346,7 @@ namespace Gerador.Infrastructure
 
             TextClass = new StringBuilder();
             TextClass.AppendLine("using System.Data.Entity;                                                               ");
+            TextClass.AppendLine("using System.Data.Entity.ModelConfiguration.Conventions;                                ");
             TextClass.AppendLine("using " + ProjectName + ".Common;                                                       ");
             TextClass.AppendLine("                                                                                        ");
             TextClass.AppendLine("namespace " + ProjectName + ".Data                                                      ");
@@ -367,12 +377,13 @@ namespace Gerador.Infrastructure
             TextClass.AppendLine("                                                                                         ");
             TextClass.AppendLine("        protected override void OnModelCreating(DbModelBuilder ModelBuilder)             ");
             TextClass.AppendLine("        {                                                                                ");
+            TextClass.AppendLine("             ModelBuilder.Conventions.Remove<PluralizingTableNameConvention>();          ");
 
-            foreach (var item in GroupTables)
-            {
-                var Model = item.Value;
-                TextClass.AppendLine("             ModelBuilder.Configurations.Add(new " + Model.ClassName + "Mapper());   ");
-            }
+            //foreach (var item in GroupTables)
+            //{
+            //    var Model = item.Value;
+            //    TextClass.AppendLine("             ModelBuilder.Configurations.Add(new " + Model.ClassName + "Mapper());   ");
+            //}
 
             TextClass.AppendLine("        }                                                                                ");
             TextClass.AppendLine("    }                                                                                    ");

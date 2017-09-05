@@ -161,28 +161,5 @@ namespace HarpiaGed.Recognition.UnitTest
             else { return System.Drawing.Imaging.ImageFormat.Wmf.ToString(); }
         }
 
-        public static void CreateXml(string directory, string fileName, InfoImage infoImage)
-        {
-            using (XmlWriter writer = XmlWriter.Create(String.Concat(directory, @"\" + fileName)))
-            {
-                writer.WriteStartDocument();
-                writer.WriteStartElement("image");
-                
-                //foreach (Employee employee in employees)
-                //{
-                //    writer.WriteStartElement("Employee");
-
-                //    writer.WriteElementString("ID", employee.Id.ToString());
-                //    writer.WriteElementString("FirstName", employee.FirstName);
-                //    writer.WriteElementString("LastName", employee.LastName);
-                //    writer.WriteElementString("Salary", employee.Salary.ToString());
-
-                //    writer.WriteEndElement();
-                //}
-
-                writer.WriteEndElement();
-                writer.WriteEndDocument();
-            }
-        }
     }
 }

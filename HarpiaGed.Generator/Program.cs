@@ -77,7 +77,7 @@ namespace Gerador
         {
             MakeBase();
             MakeModels();
-            MakeMappers();
+            //MakeMappers();
             MakeContext();
             MakeRepository();
             MakeIRepository();

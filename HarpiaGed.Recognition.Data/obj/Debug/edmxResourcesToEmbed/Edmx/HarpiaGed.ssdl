@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HarpiaGed.Recognition.Data.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="imagem">
+    <Key>
+      <PropertyRef Name="id_imagem" />
+    </Key>
+    <Property Name="id_imagem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dpix" Type="nvarchar(max)" />
+    <Property Name="dpiy" Type="nvarchar(max)" />
+    <Property Name="ppix" Type="nvarchar(max)" />
+    <Property Name="ppiy" Type="nvarchar(max)" />
+    <Property Name="width" Type="nvarchar(max)" />
+    <Property Name="height" Type="nvarchar(max)" />
+    <Property Name="pixel_format" Type="nvarchar(max)" />
+    <Property Name="extension" Type="nvarchar(max)" />
+    <Property Name="megapixel" Type="nvarchar(max)" />
+    <Property Name="file_size" Type="nvarchar(max)" />
+    <Property Name="interpolacao" Type="nvarchar(max)" />
+    <Property Name="dt_entrada" Type="date" Nullable="false" />
+    <Property Name="qualidade" Type="nvarchar(max)" />
+    <Property Name="documento" Type="nvarchar(max)" />
+    <Property Name="status" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="imagem_ocr">
+    <Key>
+      <PropertyRef Name="id_imagem_ocr" />
+    </Key>
+    <Property Name="id_imagem_ocr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_imagem" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="nvarchar(max)" />
+    <Property Name="vertice_top" Type="int" Nullable="false" />
+    <Property Name="vertice_left" Type="int" Nullable="false" />
+    <Property Name="vertice_right" Type="int" Nullable="false" />
+    <Property Name="vertice_bottom" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__imagem_oc__id_im__30F848ED">
+    <End Role="imagem" Type="Self.imagem" Multiplicity="1" />
+    <End Role="imagem_ocr" Type="Self.imagem_ocr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="imagem">
+        <PropertyRef Name="id_imagem" />
+      </Principal>
+      <Dependent Role="imagem_ocr">
+        <PropertyRef Name="id_imagem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HarpiaGedRecognitionDataModelStoreContainer">
+    <EntitySet Name="imagem" EntityType="Self.imagem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="imagem_ocr" EntityType="Self.imagem_ocr" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__imagem_oc__id_im__30F848ED" Association="Self.FK__imagem_oc__id_im__30F848ED">
+      <End Role="imagem" EntitySet="imagem" />
+      <End Role="imagem_ocr" EntitySet="imagem_ocr" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
