@@ -124,29 +124,34 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GoogleServiceApi.svc" />
     <Content Include="GoogleService.svc" />
     <Content Include="Leia-me.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="Enum\EGoogleFeatures.cs" />
     <Compile Include="Interface\IGoogleService.cs" />
     <Compile Include="GoogleService.svc.cs">
       <DependentUpon>GoogleService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Models\ImageProcessLocalization.cs" />
+    <Compile Include="Models\ImageProcessLandMarks.cs" />
+    <Compile Include="Models\ImageProcessPageParagraphs.cs" />
+    <Compile Include="Models\ImageProcessPage.cs" />
+    <Compile Include="Models\ImageProcessLabels.cs" />
+    <Compile Include="Models\ImageProcessColor.cs" />
+    <Compile Include="Models\ImageProcessCoordenate.cs" />
+    <Compile Include="Models\ImageProcess.cs" />
     <Compile Include="Models\ImageDto.cs" />
     <Compile Include="InfoImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HarpiaGed.Recognition.Data\HarpiaGed.Recognition.Data.csproj">
-      <Project>{aca17272-0229-466c-8e19-de7d75c1a860}</Project>
-      <Name>HarpiaGed.Recognition.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="json\HarpiaGedRecognition-eb7d69342776.json" />
+    <None Include="Properties\PublishProfiles\Deploy_Rodrigo.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

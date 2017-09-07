@@ -14,25 +14,25 @@ namespace HarpiaGed.Recognition.WCF.Interface
     public interface IGoogleService
     {
         [OperationContract]
-        object DetectDocumentText(System.IO.Stream fileStream);
+        List<ImageProcessPage> DetectDocumentText(System.IO.Stream fileStream);
+
+        //[OperationContract]
+        //object DetectImageProperties(System.IO.Stream fileStream);
 
         [OperationContract]
-        object DetectImageProperties(System.IO.Stream fileStream);
+        List<ImageProcess> DetectText(System.IO.Stream fileStream);
+
+        //[OperationContract]
+        //object DetectWebInformation(System.IO.Stream fileStream);
+
+        //[OperationContract]
+        //object DetectFaces(System.IO.Stream fileStream);
 
         [OperationContract]
-        object DetectText(System.IO.Stream fileStream);
+        List<ImageProcessLabels> DetectLabels(System.IO.Stream fileStream);
 
         [OperationContract]
-        object DetectWebInformation(System.IO.Stream fileStream);
-
-        [OperationContract]
-        object DetectFaces(System.IO.Stream fileStream);
-
-        [OperationContract]
-        object DetectLabels(System.IO.Stream fileStream);
-
-        [OperationContract]
-        object DetectLandmarks(System.IO.Stream fileStream);
+        List<ImageProcessLandMarks> DetectLandmarks(System.IO.Stream fileStream);
 
     }
 }

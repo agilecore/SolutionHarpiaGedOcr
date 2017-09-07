@@ -20,8 +20,8 @@ namespace HarpiaGed.Recognition.UnitTest
 
         static void Inicialize()
         {
-            buildInformation();
-            //ChamaServico();
+            //buildInformation();
+            ChamaServico();
         }
 
         internal static void buildInformation()
@@ -73,7 +73,7 @@ namespace HarpiaGed.Recognition.UnitTest
         /// <summary>
         /// Chamada do Google
         /// </summary>
-        static async void ChamaServico()
+        static void ChamaServico()
         {
             Console.ForegroundColor = ConsoleColor.Red;
 
@@ -86,12 +86,14 @@ namespace HarpiaGed.Recognition.UnitTest
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\2.jpg";
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\3.jpg";
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\4.jpg";
-            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\5.jpg";
+            //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\5.jpg";
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\6.jpg";
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\7.jpg";
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\8.jpg";
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\9.jpg";
             //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\10.jpg";
+            //var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\11.jpg";
+            var diretoryImage = @"C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.UnitTest\Upload\12.jpg";
 
             var image = Common.GetImage(diretoryImage);
 
@@ -100,17 +102,31 @@ namespace HarpiaGed.Recognition.UnitTest
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            var ret = (IEnumerable<object>)client.DetectText(Common.GetStream(diretoryImage));
+            //var result = client.DetectText(Common.GetStream(diretoryImage));
+            var result = client.DetectLandmarks(Common.GetStream(diretoryImage));
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            foreach (var item in ret)
-            {
-                WriteToConsole(item.ToString());
-            }
-            stopwatch.Stop();
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            WriteToConsole(String.Format("Tempo decorrido: Minutos:{0}, Segundos:{1}, Milésimos:{2}", stopwatch.Elapsed.Minutes, stopwatch.Elapsed.Seconds, stopwatch.Elapsed.Milliseconds));
+            //Console.ForegroundColor = ConsoleColor.Green;
+            //var count = 1;
+            //foreach (var item in result)
+            //{
+            //    if (item.Locale == String.Empty)
+            //    {
+            //        var cordenada = String.Empty;
+            //
+            //        foreach (var coordenate in item.Coordenates)
+            //        {
+            //            cordenada += " X:" + coordenate.X.ToString() + " - Y:" + coordenate.Y.ToString() + Environment.NewLine;
+            //        }
+            //
+            //        WriteToConsole("---------------------Descricao: "+ count + "----------------------");
+            //        WriteToConsole(String.Format(" ProcessOCR:\"{0}\" " + Environment.NewLine + " Coordenada:{1} Confidence:{2}" + Environment.NewLine + " ScoreImage:{3}", item.Describe, cordenada, item.Confidence, item.Score));
+            //        count += 1;
+            //    }
+            //}
+            //stopwatch.Stop();
+            //
+            //Console.ForegroundColor = ConsoleColor.Yellow;
+            //WriteToConsole(String.Format("Tempo decorrido: Minutos:{0}, Segundos:{1}, Milésimos:{2}", stopwatch.Elapsed.Minutes, stopwatch.Elapsed.Seconds, stopwatch.Elapsed.Milliseconds));
 
         }
 
@@ -151,7 +167,7 @@ namespace HarpiaGed.Recognition.UnitTest
         {
             if (message.Length > 0)
             {
-                Console.WriteLine("prompt: " + message);
+                Console.WriteLine(message);
             }
         }
 

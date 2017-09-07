@@ -357,7 +357,7 @@ namespace Gerador.Infrastructure
             foreach (var item in GroupTables)
             {
                 var Model = item.Value;
-                TextClass.AppendLine("             public DbSet<" + String.Concat(Model.ClassName, SufixoModels) + "> " + Model.ClassName + " { get; set; }");
+                TextClass.AppendLine("        public DbSet<" + String.Concat(Model.ClassName, SufixoModels) + "> " + Model.ClassName + " { get; set; }");
             }
 
             TextClass.AppendLine("                                                                                         ");

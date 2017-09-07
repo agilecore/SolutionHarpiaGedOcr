@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Base.cs" />
-    <Compile Include="Models\ImageDto.cs" />
-    <Compile Include="Models\ImageOcrDto.cs" />
+    <Compile Include="Models\ImagemDto.cs" />
+    <Compile Include="Models\ImagemOcrDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

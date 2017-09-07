@@ -75,10 +75,5 @@ C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recog
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\bin\Grpc.Core.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\bin\Newtonsoft.Json.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\bin\System.Interactive.Async.xml
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\obj\Debug\HarpiaGed.Recognition.WCF.csprojResolveAssemblyReference.cache
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\obj\Debug\HarpiaGed.Recognition.WCF.dll
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\obj\Debug\HarpiaGed.Recognition.WCF.pdb
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\bin\HarpiaGed.Recognition.Data.dll
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\bin\EntityFramework.dll
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\bin\HarpiaGed.Recognition.Data.pdb
-C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.WCF\bin\EntityFramework.xml

@@ -3,6 +3,8 @@ C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recog
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\bin\Debug\HarpiaGed.Recognition.Data.pdb
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\bin\Debug\EntityFramework.dll
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\bin\Debug\HarpiaGed.Recognition.Common.dll
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\bin\Debug\HarpiaGed.Recognition.Common.pdb
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\bin\Debug\EntityFramework.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Data\obj\Debug\HarpiaGed.Recognition.Data.csprojResolveAssemblyReference.cache

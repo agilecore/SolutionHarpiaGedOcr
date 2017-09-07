@@ -121,12 +121,6 @@
     </None>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\HarpiaGed.Recognition\HarpiaGed.Recognition.csproj">
-      <Project>{7885e70c-8da7-4f22-93b9-446265217b63}</Project>
-      <Name>HarpiaGed.Recognition</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

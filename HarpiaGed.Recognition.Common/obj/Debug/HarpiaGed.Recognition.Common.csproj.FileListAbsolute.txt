@@ -1,0 +1,4 @@
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Common\bin\Debug\HarpiaGed.Recognition.Common.dll
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Common\bin\Debug\HarpiaGed.Recognition.Common.pdb
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Common\obj\Debug\HarpiaGed.Recognition.Common.dll
+C:\Users\rodrigo.fernandes\Documents\GitHub\SolutionHarpiaGedOcr\HarpiaGed.Recognition.Common\obj\Debug\HarpiaGed.Recognition.Common.pdb

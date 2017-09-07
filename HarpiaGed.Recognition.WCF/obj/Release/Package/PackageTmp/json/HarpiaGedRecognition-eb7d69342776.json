@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "harpiagedrecognition",
+  "private_key_id": "eb7d6934277620e5fd1e3da327908abae4481d88",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC7+OOqeh+Ku5/E\npIc6Whdzq4NU7vL+1T2N2C0WKpa4lwMfQc8rvygYF9XBhXF7Y62cnXYvSNxGcMGL\nLK4xqN9kmNAoYBpm6RUrZ5h+s13aunydgVpkDg5DZ5hRW+p8HI7hWo3Mx2/77fKn\nKAASyGq/rxCEej61/38M0HDJWq6m0U6kFBRVHrWwXZiC0vAksX9VyvXE1O9Ag9Fz\ncgaKZwLJLILTuOkcZXJzCMqnKoZjQSMG/vhB/7ufnm8Htxwb507h5V/VkTYMYbug\nHVqSZJa4qePPHS/By/kYZ0a2jdhITyMMeDHDS2ttwExem4KUatXtRBED01cYJvzG\ntYKzOJHJAgMBAAECggEAD+sGbZcAsY0MvThxHrEHLCOVwDUphQjOGQNZ4xcJczmP\nmT+nkYTzOmIXVxdruichakI/4kZ1Z+4vx69Jk5lBTLmvpAGqbrVVlnrEBFPAco/J\nEoYEH3W8wbrFwHsMDwVUmLMkT7eCbVdTzZHCutR3zMKAn7Vh9uPbcJx8tqJ8KJJr\nFtZKVTz3QX8G9ixmYmtGj254lAA+NSWLpAnIbccHDeL/TXVyyKE3CAZ0qTehAX+Q\nlDIHNW6PcXDgdzOKoPDp8gSTH9m8oAYocRw9ILcTwMD8TZ05F0lpUTh6eYqiZF0i\n08G1RSdwNg8V1QJ7JkHk7AI7FnOpP/LMflN6VEPUoQKBgQDmwTambVL5vAZwNvOV\noVFGP7etnl4VosAf3A60oqTh0yjaGxqjvAAeZH0EcM89gG4Y1zAdum82O9ZCozUu\nqh/43Oq/wZaKm37RIBQSqnmOYsZ92/6vmDjIzvMETrLUlA5ZIYg7h0JeDiwEg+8v\n4blPSQ5JhzPwpQgBknBE1RMl6QKBgQDQiXVx8LUpNtNSeG0ZhE7umT4DL4fd/HOq\nyKNUI8Ke8DA4gGaVloyWL7NTUxv4fHztqBjSraFOOjZdLhU5pD1kZxoil7CuzshQ\nUbpPzTN1nllL8N6GOkjPPaY0wz1skBIfT1Bvglo1Kfc9cT8gfrHRR5jTvhDM4DKv\nnnrG0FpA4QKBgHACccivYIug3W8y/WIwgAcdfsdkDD9sVN4iL3E3UdncagQVDAVW\niKg4FwdEyxQLd2XPbqe/i6RDv2lxV6tjIUnn0ntqOOznNdPFQnkdDwwyni8Rzrrl\npQq0ifoZSW0uwRg60qoyqeCF+I/oiv4vD4iQ6cJ/QpMZSJ2au6xt0XGhAoGAT4Oq\nSYjLuuxRxYdvqiQd6LJ7x8Eu4EDrZbpdNK7x/aJ98H1dIDqoXnfPu7zb1HK7O+81\nj9duwyJFKmBw7WqnkgoSGBCY6P6luKKBFP6cWYPIbsFoR+wfaQ4LuuCbIjMJBfE7\nLVmZxd27jS0KMfy9FpxjNJGrXEM8cGRQUlCNqWECgYBSpLHOzvGDimKnEtlIL2tW\nzPxZjicBhjfLXaic2gtIDqlT7zOsdcs7SS/X9VswNHpyVu/yxff8LEwMODuev+oB\nQywa5XQCCpHc2mvDs89uYMsUH8HWKzEbn+k7TbkaFcfn9jZIRfzVUaEI9LmHGfu4\nx1CSru0eSSIH6w1cjV8Olg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "harpiaaccountservice@harpiagedrecognition.iam.gserviceaccount.com",
+  "client_id": "106417706506760464394",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/harpiaaccountservice%40harpiagedrecognition.iam.gserviceaccount.com"
+}

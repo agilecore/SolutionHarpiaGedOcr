@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Publicado</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Google.Api.CommonProtos.dll">
+      <publishTime>05/22/2017 11:51:12</publishTime>
+    </File>
+    <File Include="bin/Google.Api.Gax.dll">
+      <publishTime>06/22/2017 08:36:56</publishTime>
+    </File>
+    <File Include="bin/Google.Api.Gax.Grpc.dll">
+      <publishTime>06/22/2017 08:36:56</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Auth.dll">
+      <publishTime>08/30/2017 11:25:52</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Auth.PlatformServices.dll">
+      <publishTime>08/30/2017 11:25:52</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Core.dll">
+      <publishTime>08/30/2017 11:25:46</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.dll">
+      <publishTime>08/30/2017 11:25:50</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.PlatformServices.dll">
+      <publishTime>08/30/2017 11:25:50</publishTime>
+    </File>
+    <File Include="bin/Google.Apis.Vision.v1.dll">
+      <publishTime>08/30/2017 11:58:48</publishTime>
+    </File>
+    <File Include="bin/Google.Cloud.Vision.V1.dll">
+      <publishTime>06/22/2017 11:03:22</publishTime>
+    </File>
+    <File Include="bin/Google.Protobuf.dll">
+      <publishTime>05/04/2017 00:03:34</publishTime>
+    </File>
+    <File Include="bin/Grpc.Auth.dll">
+      <publishTime>06/21/2017 15:49:14</publishTime>
+    </File>
+    <File Include="bin/Grpc.Core.dll">
+      <publishTime>06/21/2017 15:49:00</publishTime>
+    </File>
+    <File Include="bin/grpc_csharp_ext.x64.dll">
+      <publishTime>06/21/2017 15:49:02</publishTime>
+    </File>
+    <File Include="bin/grpc_csharp_ext.x86.dll">
+      <publishTime>06/21/2017 15:49:02</publishTime>
+    </File>
+    <File Include="bin/HarpiaGed.Recognition.WCF.dll">
+      <publishTime>09/06/2017 15:53:21</publishTime>
+    </File>
+    <File Include="bin/libgrpc_csharp_ext.x64.dylib">
+      <publishTime>06/21/2017 15:49:00</publishTime>
+    </File>
+    <File Include="bin/libgrpc_csharp_ext.x64.so">
+      <publishTime>06/21/2017 15:49:00</publishTime>
+    </File>
+    <File Include="bin/libgrpc_csharp_ext.x86.dylib">
+      <publishTime>06/21/2017 15:49:00</publishTime>
+    </File>
+    <File Include="bin/libgrpc_csharp_ext.x86.so">
+      <publishTime>06/21/2017 15:49:02</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/02/2017 17:46:32</publishTime>
+    </File>
+    <File Include="bin/System.Interactive.Async.dll">
+      <publishTime>11/21/2016 14:05:54</publishTime>
+    </File>
+    <File Include="GoogleService.svc">
+      <publishTime>08/31/2017 15:26:31</publishTime>
+    </File>
+    <File Include="GoogleServiceApi.svc">
+      <publishTime>09/06/2017 09:32:48</publishTime>
+    </File>
+    <File Include="grpc_csharp_ext.x64.dll">
+      <publishTime>06/21/2017 15:49:02</publishTime>
+    </File>
+    <File Include="grpc_csharp_ext.x86.dll">
+      <publishTime>06/21/2017 15:49:02</publishTime>
+    </File>
+    <File Include="json/HarpiaGedRecognition-eb7d69342776.json">
+      <publishTime>09/01/2017 11:25:11</publishTime>
+    </File>
+    <File Include="Leia-me.txt">
+      <publishTime>09/01/2017 11:15:59</publishTime>
+    </File>
+    <File Include="libgrpc_csharp_ext.x64.dylib">
+      <publishTime>06/21/2017 15:49:00</publishTime>
+    </File>
+    <File Include="libgrpc_csharp_ext.x64.so">
+      <publishTime>06/21/2017 15:49:00</publishTime>
+    </File>
+    <File Include="libgrpc_csharp_ext.x86.dylib">
+      <publishTime>06/21/2017 15:49:00</publishTime>
+    </File>
+    <File Include="libgrpc_csharp_ext.x86.so">
+      <publishTime>06/21/2017 15:49:02</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/31/2017 15:06:54</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/06/2017 15:53:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
